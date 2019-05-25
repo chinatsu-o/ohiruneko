@@ -211,7 +211,7 @@ body{
 }
 .navi-index span{
   display: inline-block;  
-  
+  color: #686868;
   height: 85px;
   width: 128px;
   line-height: 85px;
