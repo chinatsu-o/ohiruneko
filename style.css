@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:500');
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Kosugi Maru', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  width: 1066px;
+  margin: 0 auto;
+  margin-top: 30px;
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+#subtitle img{
+  width: 256px;
+  margin-left: 200px;
+}
+#title img{
+  width: 640px;
+  height: 80px;
+}
+#title{
+  width: 640px;
+  margin: 0 auto;
+}
+
+.flexbox-container{
+  display: flex;
+  align-items: flex-start;
+}
+.main{
+  order: 2;
+  flex: 3;
+}
+
+ /*=== 画像の表示エリア ================================= */
+ .slide {
+  position   : relative;
+  overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+  width      : 640px;
+  height     : 452px;
+  margin     : auto;      /* サンプルは中央寄せの背景：白 */
+  background : #fff;
+}
+ 
+ /*=== 画像の設定 ======================================= */
+.slide img {
+  display    : block;
+  position   : absolute;
+                      /* 画像のサイズを表示エリアに合せる */
+  width      : inherit;
+  height     : inherit;
+  opacity    : 0;
+  animation  : slideAnime 20s ease infinite;
+}
+ 
+ /*=== スライドのアニメーションを段差で開始する ========= */
+.slide img:nth-of-type(1) { animation-delay: 0s }
+.slide img:nth-of-type(2) { animation-delay: 5s }
+.slide img:nth-of-type(3) { animation-delay: 10s }
+.slide img:nth-of-type(4) { animation-delay: 15s }
+ 
+ /*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+   0% { opacity: 0 }
+   10% { opacity: 1 }
+  25% { opacity: 1 }
+  35% { opacity: 0 }
+ 100% { opacity: 0 }
+}
+
+
+.leftbar{
+ 
+  order: 1;
+  flex: 1;
+}
+
+.navi-index li{
+
+  width: 213px;
+  height: 85px;
+  margin-bottom: 98.5px;
+}
+
+.navi-index img{
+  display: inline-block;
+ 
+  vertical-align: top;
+  width: 85px;
+  height: 85px;
+}
+.navi-index a{
+  display: block;
+  height: 85px;
+}
+.navi-index span{
+  display: inline-block;  
+  
+  height: 85px;
+  width: 128px;
+  line-height: 85px;
+  font-size: 1.2em;
+  padding-left: 7px;
+}
+
+.rightbar{
+  
+  order: 3;
+  flex: 1;
+}
+#left{
+  width: 213px;
+  margin-right: 10px;
+}
+#right{
+  width: 213px;
+  margin-left: 30px;
+}
+
+footer{
+  text-align: center;
+  color: #919191;
+
+}
